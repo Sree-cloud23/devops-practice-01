@@ -1,1 +1,19 @@
-test
+apiVersion: extension/v1beta1
+kind: ingress
+metadata:
+  name:demo-ingress
+spec:
+  rules:
+    - host: knote111.learnitguide.com
+      http:
+        paths:
+          -backend:
+            seviceName:knote
+      
+            servicePort:80
+    - host: knote222.learnitguide.com
+      http:
+        paths:
+          -backend:
+            seviceName:knote
+            servicePort:80
