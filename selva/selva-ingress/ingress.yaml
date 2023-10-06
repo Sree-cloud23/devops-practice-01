@@ -1,19 +1,19 @@
-apiVersion: extension/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: ingress
 metadata:
-  name:demo-ingress
+  name: demo-ingress
 spec:
   rules:
-    - host: knote111.learnitguide.com
-      http:
-        paths:
-          -backend:
-            seviceName:knote
-      
-            servicePort:80
-    - host: knote222.learnitguide.com
-      http:
-        paths:
-          -backend:
-            seviceName:knote
-            servicePort:80
+  - host: knote111.learnitguide.com
+    http:
+      paths:
+      - backend:
+          seviceName: knote
+
+        servicePort: 80
+  - host: knote222.learnitguide.com
+    http:
+      paths:
+      - backend:
+          seviceName: knote
+          servicePort: 80
